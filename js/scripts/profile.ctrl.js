@@ -1,11 +1,14 @@
 (function() {
   'use strict';
   angular.module('githubApp')
-    .controller('ProfileSearch', ['searchService', Controller]);
+    .controller('ProfileSearch', ['searchService', 'utilityService', Controller]);
 
-  function Controller(searchService) {
+  function Controller(searchService, utilityService) {
     var vm = this;
 
-    console.log(searchService);
+    var el = document.getElementById('imageId');
+    el.addEventListener('change', utilityService.checkPhoto, false);
+
+
   }
 })();

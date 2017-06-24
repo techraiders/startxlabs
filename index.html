@@ -28,6 +28,17 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
   <div class="container">
+    <form>
+      <fieldset>
+        <legend>Upload image</legend>
+        <section class="row">
+          <fieldset class="form-group">
+            <label for="imageChooser" class="control-label">Image:</label>
+            <input type="file" id="imageId" class="form-control">
+          </fieldset>
+        </section>
+      </fieldset>
+    </form>
     <hr>
     <footer>
       <p>&copy; Company 2015</p>
@@ -38,6 +49,7 @@
   <script src="js/scripts/github.module.js"></script>
   <script src="js/scripts/search.service.js"></script>
   <script src="js/scripts/profile.ctrl.js"></script>
+  <script src="js/scripts/utility.service.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
   window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
