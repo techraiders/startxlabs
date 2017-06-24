@@ -23,22 +23,37 @@
         <![endif]-->
 </head>
 
-<body data-ng-controller="ProfileSearch as ps">
+<body data-ng-controller="ProfileSearch as vm">
   <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
   <div class="container">
-    <form>
-      <fieldset>
-        <legend>Upload image</legend>
-        <section class="row">
-          <fieldset class="form-group">
-            <label for="imageChooser" class="control-label">Image:</label>
-            <input type="file" id="imageId" class="form-control">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="input-group">
+          <div class="input-group-btn">
+            <input type="search" class="form-control" data-ng-model="vm.query.username" placeholder="Please enter your github username and press search" />
+            <button class="btn btn-default" data-ng-click="vm.search(vm.query.username)">
+              <i class="fa fa-search" aria-hidden="true">Search</i>
+            </button>
+          </div>
+          <!-- input-group-btn -->
+        </div>
+        <!-- input-group -->
+        <pre> {{vm.user | json}} </pre>
+        <form>
+          <fieldset>
+            <legend>User Profile: </legend>
+            <section class="row">
+              <fieldset class="col-sm-4 form-group">
+                <label for="imageChooser" class="control-label">Image:</label>
+                <input type="file" id="imageId" class="form-control">
+              </fieldset>
+            </section>
           </fieldset>
-        </section>
-      </fieldset>
-    </form>
+        </form>
+      </div>
+    </div>
     <hr>
     <footer>
       <p>&copy; Company 2015</p>
