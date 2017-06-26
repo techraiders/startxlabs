@@ -58,11 +58,6 @@
         <section class="panel-body">
           <table class="table table-responsive table-hover table-striped">
             <caption>USER DETAILS</caption>
-            <!-- <thead>
-              <tr>
-                <th></th>
-              </tr>
-            </thead> -->
             <tbody>
               <tr data-ng-repeat="(key, value) in vm.user">
                 <td> <strong>{{key | uppercase}}</strong> </td>
@@ -83,13 +78,14 @@
           <section class="panel-heading">
           </section>
           <section class="panel-body">
+            <div id="preview"></div>
             <form>
               <fieldset>
                 <legend>Choose an image: </legend>
                 <section class="row">
                   <fieldset class="col-sm-4 form-group">
                     <label for="imageChooser" class="control-label">Image:</label>
-                    <input type="file" id="imageId" class="form-control">
+                    <input type="file" id="imageId" class="form-control" multiple="true">
                   </fieldset>
                 </section>
               </fieldset>

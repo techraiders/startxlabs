@@ -12,12 +12,12 @@
     };
 
     function resolve(response) {
-      console.log(response.data);
+      // console.log(response.data);
       return response.data;
     }
 
     function reject(reason) {
-      console.log(reason);
+      // console.log(reason);
       return reason.data;
     }
 

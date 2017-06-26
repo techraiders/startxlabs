@@ -7,6 +7,15 @@
     var vm = this;
     vm.search = search;
 
+    var el = document.getElementById('imageId');
+    el.addEventListener('change', utilityService.previewImages, false);
+
+    function search(userName) {
+      searchService.search(userName).then(function(response) {
+        vm.user = response;
+      });
+    }
+
     vm.user = {
       "login": "techraiders",
       "id": 19530178,
@@ -39,14 +48,5 @@
       "created_at": "2016-05-23T10:20:16Z",
       "updated_at": "2017-04-03T19:47:20Z"
     };
-
-    var el = document.getElementById('imageId');
-    el.addEventListener('change', utilityService.checkPhoto, false);
-
-    function search(userName) {
-      searchService.search(userName).then(function(response) {
-        vm.user = response;
-      });
-    }
   }
 })();
